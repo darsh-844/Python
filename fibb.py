@@ -3,9 +3,9 @@ y=0
 z=1
 
 for i in range (0,x):
-    print(y)
     y=z+y
     z=y-z
+    print(z)
     
 a=int(input("Enter the term for which you want to find the fibonacci number: "))
 b=0
