@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt     # pyright: ignore[reportMissingModuleSource]
 
 # Data
 categories = ['Electronics', 'Clothing', 'Grocery', 'Furniture', 'Toys', 'Books']
