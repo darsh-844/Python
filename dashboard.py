@@ -260,9 +260,9 @@ Executive Sales Summary & Insights Report
 
 Title & Purpose: Executive summary analyzing retail store performance across Delhi, Mumbai, and Bengaluru for 2026 to optimize inventory and promotion strategy.
 Key Findings:
-  1. Top City: Mumbai generated the highest sales average (~₹445k per transaction block), outperforming Delhi (~₹387k) and Bengaluru (~₹348k).
-  2. Product Performance: Electronics is our largest revenue driver (~₹1.88 Million total sales), generating more than double the sales of Grocery (~₹706k).
+  1. Top City: Mumbai generated the highest sales average (₹445k per transaction block), outperforming Delhi (₹387k) and Bengaluru (₹348k).
   3. Seasonality Surge: Sales peak significantly in October and November during the festive period, rising over 30% above the annual monthly average.
+  2. Product Performance: Electronics is our largest revenue driver (₹1.88 Million total sales), generating more than double the sales of Grocery (₹706k).
     Data Quality Note: Three corrupted transaction logs showing impossibly high revenue values (8x normal levels) were identified on specific dates and removed to ensure accurate financial reporting.
 Recommendations:
   1. Inventory Preparation: Increase Electronics inventory levels in Mumbai and Delhi by at least 35% starting in early September to maximize festive season demand.
