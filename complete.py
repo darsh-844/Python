@@ -268,3 +268,4 @@ Recommendations:
   1. Inventory Preparation: Increase Electronics inventory levels in Mumbai and Delhi by at least 35% starting in early September to maximize festive season demand.
   2. Promotional Optimization: Maintain targeted 15–20% discount tiers on high-margin items during weekends to capitalize on strong end-of-week consumer shopping habits.
 """)
+
