@@ -12,6 +12,7 @@
 # (ii) above 3 and below 5-10 Lakh
 # (iii) below 3-5 Lakh
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.DataFrame({
     'name' : ['Aarushi','AARAV KARN','AARYAN NITIN ZADE','ADITYA SARIN','AFIF KHAN','AISHWARYA PARASHAR','AJAY KUMAR GIRI','AKRITI SINGH','AKSHAT GARG','ANIKET SANGAL','ANISH KUMAR',
@@ -103,3 +104,10 @@ def categorize_package(performance):
 
 df['annual_performance'] = df['performance'].apply(categorize_package)
 print('\n',df[['name', 'performance', 'annual_performance']].to_string())
+
+plt.figure(figsize=(9,5))
+plt.bar(df['annual_package'],df['department'],color=['red','blue','orange'])
+plt.title('Pkg Status vs Department')
+plt.xlabel('Pkg Status')
+plt.ylabel('Department')
+plt.show()
