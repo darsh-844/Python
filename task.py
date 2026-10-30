@@ -13,6 +13,7 @@
 # (iii) below 3-5 Lakh
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 df = pd.DataFrame({
     'name' : ['Aarushi','AARAV KARN','AARYAN NITIN ZADE','ADITYA SARIN','AFIF KHAN','AISHWARYA PARASHAR','AJAY KUMAR GIRI','AKRITI SINGH','AKSHAT GARG','ANIKET SANGAL','ANISH KUMAR',
@@ -42,11 +43,11 @@ df = pd.DataFrame({
                 'Embedded','Thermodynamics','C++','Python','IoT','VLSI','AutoCAD','C++','Java','IoT',
                 'Iot','AutoCAD','Python','Java','IoT','Embedded','Thermodynamics','C++','Python','VLSI',
                 'Iot','Thermodynamics','Python','Java','VLSI','Embedded','AutoCAD'],
-    'annual_package' : ['1200000','1000000','200000','400000','1700000','1500000','1200000','1000000',
-                        '1200000','1000000','200000','400000','1700000','1500000','1200000','1000000',
-                        '1200000','1000000','200000','400000','1700000','1500000','1200000','1000000',
-                        '1200000','1000000','200000','400000','1700000','1500000','1200000','1000000',
-                        '1200000','1000000','200000','400000','1700000']
+    'annual_package' : [1200000,1000000,200000,400000,1700000,1500000,1200000,1000000,
+                        1200000,1000000,200000,400000,1700000,1500000,1200000,1000000,
+                        1200000,1000000,200000,400000,1700000,1500000,1200000,1000000,
+                        1200000,1000000,200000,400000,1700000,1500000,1200000,1000000,
+                        1200000,1000000,200000,400000,1700000]
 })
 
 print("\n" + "="*10 + ' Task 1: Fetch Name ' + "="*10 + "\n")
@@ -78,7 +79,6 @@ job_count = df['job_selection'].value_counts()
 print('\n',job_count)
 
 print("\n" + "="*10 + ' Task 8: Highest/average/lowest of each department ' + "="*10 + "\n")
-df['annual_package'] = df['annual_package'].astype(int)
 pkg_stats = df.groupby('department')['annual_package'].agg(['max', 'mean', 'min']).round(2)
 print('\n',pkg_stats)
 
@@ -105,9 +105,23 @@ def categorize_package(performance):
 df['annual_performance'] = df['performance'].apply(categorize_package)
 print('\n',df[['name', 'performance', 'annual_performance']].to_string())
 
-plt.figure(figsize=(9,5))
-plt.bar(df['annual_package'],df['department'],color=['red','blue','orange'])
-plt.title('Pkg Status vs Department')
-plt.xlabel('Pkg Status')
-plt.ylabel('Department')
-plt.show()
+# plt.figure(figsize=(9,5))
+# plt.bar(df['annual_package'],df['department'],color=['red','blue','orange'])
+# plt.title('Pkg Status vs Department')
+# plt.xlabel('Pkg Status')
+# plt.ylabel('Department')
+# plt.show()
+
+# plt.figure(figsize=(8,5))
+# plt.hist(pkg_stats, bins=8, color=['purple','orange','blue'], edgecolor='black')
+
+# Title and Labels
+# plt.title('Salary Distribution')
+# plt.xlabel('count/sum of annual package/average')
+# plt.ylabel(df['department'])
+
+# Grid
+# plt.grid(axis='y', alpha=0.75)
+
+# Show Plot
+# plt.show()
